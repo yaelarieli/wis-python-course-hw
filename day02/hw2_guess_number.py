@@ -2,14 +2,18 @@
 
 import random
 
-computer_think = random.randrange(1,21)
-number_of_guess=0
+computer_think = random.randrange(1, 21)
+number_of_guess = 0
 
-user_guress=int(input("The computer think about a whole number betwee 1 and 20, guess what number: "))
+user_guress = int(
+    input(
+        "The computer think about a whole number betwee 1 and 20, guess what number: "
+    )
+)
 
 while True:
     number_of_guess += 1
-    if user_guress==computer_think:
+    if user_guress == computer_think:
         print("You are correct!")
         break
     elif user_guress > computer_think:
@@ -17,5 +21,5 @@ while True:
     elif user_guress < computer_think:
         print("Your number is smaller then the computer number, guess again:")
 
-    user_guress=int(input())
+    user_guress = int(input())
 print(f"You had {number_of_guess} guesses")
