@@ -29,11 +29,11 @@ def correct_or_not(user_guess, computer_think):
             print("You are correct!")
             break
         elif user_guess > computer_think:
-            print("Your number is bigger then the computer number, guess again:")
+            user_guess=input("Your number is bigger then the computer number, guess again:")
         elif user_guess < computer_think:
-            print("Your number is smaller then the computer number, guess again:")
+            user_guess=input("Your number is smaller then the computer number, guess again:")
 
-        user_guess = input()
+    #    user_guess = input()
     if user_guess != "n" and user_guess != "x":
         print(f"You had {number_of_guess} guesses")
 
