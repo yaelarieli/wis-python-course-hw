@@ -6,7 +6,7 @@ where TERM is the item you are looking for and NUMBER is to upload up to a numbe
 For example:
 python hw7.py Lion 3
 
-############################## 
+----------------------------------------------
 
 The main code is hw7.py
 The functions for the program are in func_for_hw7.py
