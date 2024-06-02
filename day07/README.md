@@ -1,4 +1,4 @@
-#HW7
+## HW7
 
 These codes download data from NCBI. To run it, you need to give the following line:
 python hw7.py  TERM NUMBER
