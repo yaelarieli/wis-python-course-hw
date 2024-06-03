@@ -3,7 +3,9 @@
 These codes download data from NCBI. To run it, you need to give the following line:
 python hw7.py  TERM NUMBER
 where TERM is the item you are looking for and NUMBER is to upload up to a number of items.
+
 For example:
+
 python hw7.py Lion 3
 
 ----------------------------------------------
