@@ -6,3 +6,6 @@ The main code is:
 hw8.py
 ```
 and the functions for the program are in `func_for_hw8.py`
+
+## Instructions
+You need to choose a nubmer bwtween 1-20. and push the __Guess__
