@@ -5,7 +5,7 @@ The main code is:
 ```
 hw8.py
 ```
-and the functions for the program are in `func_for_hw8.py`
+the functions for the program are in `func_for_hw8.py`
 
 ## Instructions
 
