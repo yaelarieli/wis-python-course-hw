@@ -3,13 +3,13 @@ This Python program analyzes DNA sequences in FASTA format and provides two main
 
 ## 1. Most Common Character
 
-* Finds the most frequently occurring character (nucleotide or amino acid) in the given sequence.
+* Finds the most frequently occurring character in the given sequence.
 * Reports the character and the number of times it appears.
 
 
 ## 2. Longest Repeating Subsequence
 
-* Identifies the longest subsequence that repeats itself within the input sequence.
+* Identifies the longest sub-sequence that repeats itself within the input sequence.
 * Reports the repeating subsequence and its length.
 
 # Usage
