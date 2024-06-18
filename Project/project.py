@@ -28,23 +28,15 @@ def main():
 
     Qp = ds.Qp
     Qn = ds.Qn
-    # Rotate the Qp data by 180 degrees
-    # Qp = np.flip(Qp, axis=(0, 1))
-    # Qn = np.flip(Qn, axis=(0, 1))
     CldMtrx = CalcCldMtrx(Qp,Qn)
 
 
     Qv = ds.Qv
-    # Qv = np.flip(Qv, axis=(0, 1))
     RH = ds.RH
-    # RH = np.flip(RH, axis=(0, 1))
 
     T = ds.T
-    # T = np.flip(T, axis=(0, 1))
     prs = ds.prs
-    # prs = np.flip(prs, axis=(0, 1))
     w = ds.w
-    # w = np.flip(w, axis=(0, 1))
     z = ds.z
     Qc = Qn+Qp
 
