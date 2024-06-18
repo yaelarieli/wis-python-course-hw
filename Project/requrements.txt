@@ -1,0 +1,6 @@
+xarray
+numpy 
+scipy
+netCDF4
+matplotlib
+argparse
