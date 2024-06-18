@@ -16,8 +16,14 @@ import matplotlib.pyplot as plt
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('filename', help='file name')
+    parser.add_argument('--CloudBase','-Zb', type=int, default=60, help='Cloud base height (index)' )
+    parser.add_argument('--CorePrecentage','-prct', type=int, default=95 , help='Precentage of the highest values in core variable')
+
+
     args = parser.parse_args()
     filename = args.filename
+    Zb = args.CloudBase # Cloud base height
+    Coreth = args.CorePrecentage #  Precentage of the highest values in core variable
 
     try:
         ds = xr.open_dataset(filename)
@@ -39,22 +45,27 @@ def main():
     w = ds.w
     z = ds.z
     Qc = Qn+Qp
-
+    
     # calculate the adiabatic fraction
-    AF = calcAF(CldMtrx, w, Qv, Qc, T, prs, RH, z)
+    AF = calcAF(CldMtrx, w, Qv, Qc, T, prs, RH, z,Zb,Coreth)
+
     # Create a the figure
     plt.figure(figsize=(20, 10))
-    plt.imshow(AF, cmap='hot', interpolation='nearest', origin='lower')
-    plt.colorbar()
+    plt.imshow(AF, cmap='jet', interpolation='nearest', origin='lower')
+    colorbar = plt.colorbar()
+    colorbar.ax.set_title('AF [%]', fontsize=12,pad=20)
+    # plot only the countours of the cloud matrix
+    plt.contour(CldMtrx, levels=[0.5], colors='black', linestyles='solid',origin='lower')
     plt.title('Adiabatic Fraction')
-    plt.xlabel('x')
-    plt.ylabel('z')
+    plt.xlabel('x [m]')
+    plt.ylabel('z [m]')
     x_index = np.arange(AF.shape[1]) * 10
     y_index = np.arange(AF.shape[0]) * 10
     plt.xticks(ticks=np.arange(0, AF.shape[1], 50), labels=x_index[::50])
     plt.yticks(ticks=np.arange(0, AF.shape[0], 50), labels=y_index[::50])
     plt.show()
 
+    
 
 main()
 
