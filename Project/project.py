@@ -17,13 +17,13 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('filename', help='file name')
     parser.add_argument('--CloudBase','-Zb', type=int, default=60, help='Cloud base height (index)' )
-    parser.add_argument('--CorePrecentage','-prct', type=int, default=95 , help='Precentage of the highest values in core variable')
+    parser.add_argument('--CorePercentage','-prct', type=int, default=95 , help='Percentage of the highest values in core variable')
 
 
     args = parser.parse_args()
     filename = args.filename
     Zb = args.CloudBase # Cloud base height
-    Coreth = args.CorePrecentage #  Precentage of the highest values in core variable
+    Coreth = args.CorePercentage #  Percentage of the highest values in core variable
 
     try:
         ds = xr.open_dataset(filename)
